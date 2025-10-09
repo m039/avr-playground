@@ -28,15 +28,15 @@ void setup() {
   delay(100);
 
   sendCommand("AT+CWMODE=1", 1000);
-  sendCommand("AT+CWJAP=\""+ WIFI_SSID +"\",\""+ WIFI_PASSWORD +"\"", 10000);
-  sendCommand("AT+CIPMUX=1", 2000);
+  sendCommand("AT+CWJAP=\""+ WIFI_SSID +"\",\""+ WIFI_PASSWORD +"\"", 6000);
+  sendCommand("AT+CIPMUX=0", 2000);
 
-  sendCommand("AT+CIPSTART=0,\"TCP\",\"httpbin.org\",80", 1000);
-  sendCommand("AT+CIPSEND=0,63", 1000);
-  sendCommand("GET /get HTTP/1.1\n" 
-  "Accept: application/json\n"
-"Host: httpbin.org\n", 7000);
-  sendCommand("AT+CIPCLOSE=0", 1000);
+  sendCommand("AT+CIPSTART=\"SSL\",\"m039.ru\",443", 2000);
+  sendCommand("AT+CIPSEND=64", 2000);
+  sendCommand("GET /hello-world.txt HTTP/1.1\n"
+"Host: m039.ru\n"
+"Accept: text/html\n", 7000);
+  sendCommand("AT+CIPCLOSE", 1000);
 }
 
 void loop() {
