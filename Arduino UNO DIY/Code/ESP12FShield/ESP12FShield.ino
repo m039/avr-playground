@@ -36,7 +36,7 @@ void setup() {
   sendCommand("GET /hello-world.txt HTTP/1.1\n"
 "Host: m039.ru\n"
 "Accept: text/html\n", 7000);
-  sendCommand("AT+CIPCLOSE", 1000);
+  // sendCommand("AT+CIPCLOSE", 1000);
 }
 
 void loop() {
