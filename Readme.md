@@ -2,6 +2,8 @@
 
 The place with my boards that use AVR chips. You can read supplementary [article](https://m039.ru/post/arduino-uno-diy/) on my website.
 
+![Arduino UNO DIY.jpg](Arduino%20UNO%20DIY%20Cover.jpg)
+
 ## Arduino UNO DIY
 [A clone of Arduino UNO with 3 shields.](Arduino%20UNO%20DIY/Readme.md)
 
