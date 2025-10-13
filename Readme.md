@@ -1,6 +1,6 @@
 # AVR Playground
 
-The place with my boards that use AVR chips. You can read supplementary [article](https://m039.ru/post/arduino-uno-diy/) on my website.
+The place with my boards that use AVR chips. You can read supplementary [article](https://m039.ru/post/arduino-uno-diy/) on my website or [Habr](https://habr.com/ru/companies/timeweb/articles/955786/).
 
 ![Arduino UNO DIY.jpg](Images/Arduino%20UNO%20DIY%20Cover.jpg)
 
