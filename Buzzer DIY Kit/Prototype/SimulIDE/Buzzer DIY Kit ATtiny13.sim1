@@ -1,0 +1,51 @@
+<circuit version="1.1.0-SR1" rev="2005" stepSize="1000000" stepsPS="1000000" NLsteps="100000" reaStep="1000000" animate="0" >
+
+<item itemtype="MCU" CircId="tiny13-2" mainComp="false" Show_id="true" Show_Val="false" Pos="-220,-196" rotation="0" hflip="1" vflip="1" label="tiny13-2" idLabPos="0,-20" labelrot="0" valLabPos="-16,20" valLabRot="0" Frequency="9.6 MHz" Program="../Code/BuzzerDIYKIt/build/MicroCore.avr.13/BuzzerDIYKIt.ino.hex" Auto_Load="false" saveEepr="true" Logic_Symbol="false" Rst_enabled="false" Ext_Osc="false" Wdt_enabled="false" MainMcu="false" />
+
+<item itemtype="Mosfet" CircId="Mosfet-4" mainComp="false" Show_id="false" Show_Val="false" Pos="0,-164" rotation="0" hflip="1" vflip="1" label="Mosfet-4" idLabPos="18,0" labelrot="0" valLabPos="-16,20" valLabRot="0" P_Channel="false" Depletion="false" RDSon="1 Ω" Threshold="3 V" />
+
+<item itemtype="Resistor" CircId="Resistor-5" mainComp="false" ShowProp="Resistance" Show_id="false" Show_Val="true" Pos="8,-232" rotation="90" hflip="1" vflip="1" label="Resistor-5" idLabPos="-16,-24" labelrot="0" valLabPos="-16,6" valLabRot="0" Resistance="6 Ω" />
+
+<item itemtype="Battery" CircId="Battery-6" mainComp="false" Show_id="false" Show_Val="false" Pos="-120,-268" rotation="90" hflip="1" vflip="1" label="Battery-6" idLabPos="-18,-22" labelrot="0" valLabPos="-10,10" valLabRot="0" Voltage="5 V" Resistance="1 mΩ" />
+
+<item itemtype="Ground" CircId="Ground-7" mainComp="false" Show_id="false" Show_Val="false" Pos="-120,-220" rotation="0" hflip="1" vflip="1" label="Ground-7" idLabPos="-16,8" labelrot="0" valLabPos="-16,20" valLabRot="0" />
+
+<item itemtype="Ground" CircId="Ground-8" mainComp="false" Show_id="false" Show_Val="false" Pos="8,-64" rotation="0" hflip="1" vflip="1" label="Ground-8" idLabPos="-16,8" labelrot="0" valLabPos="-16,20" valLabRot="0" />
+
+<item itemtype="Resistor" CircId="Resistor-9" mainComp="false" ShowProp="Resistance" Show_id="false" Show_Val="true" Pos="-28,-120" rotation="90" hflip="1" vflip="1" label="Resistor-9" idLabPos="-16,-24" labelrot="0" valLabPos="-16,6" valLabRot="0" Resistance="10 kΩ" />
+
+<item itemtype="Push" CircId="Push-12" mainComp="false" Show_id="false" Show_Val="false" Pos="-140,-172" rotation="0" hflip="1" vflip="1" label="Push-12" idLabPos="-16,-24" labelrot="0" valLabPos="-16,20" valLabRot="0" Norm_Close="false" Poles="1" />
+
+<item itemtype="Ground" CircId="Ground-13" mainComp="false" Show_id="false" Show_Val="false" Pos="-116,-64" rotation="0" hflip="1" vflip="1" label="Ground-13" idLabPos="-16,8" labelrot="0" valLabPos="-16,20" valLabRot="0" />
+
+<item itemtype="AudioOut" CircId="AudioOut-3" mainComp="false" Show_id="false" Show_Val="false" Pos="48,-196" rotation="0" hflip="1" vflip="1" label="AudioOut-3" idLabPos="-20,-36" labelrot="0" valLabPos="-16,20" valLabRot="0" Buzzer="false" Impedance="8 Ω" Frequency="2 kHz" />
+
+<item itemtype="Node" CircId="Node-10" mainComp="false" Pos="8,-88" />
+
+<item itemtype="Node" CircId="Node-11" mainComp="false" Pos="-28,-164" />
+
+<item itemtype="Connector" uid="Connector-3" startpinid="Battery-6-lPin" endpinid="Resistor-5-lPin" pointList="-120,-284,-120,-308,8,-308,8,-248" />
+
+<item itemtype="Connector" uid="Connector-4" startpinid="Ground-7-Gnd" endpinid="Battery-6-rPin" pointList="-120,-236,-120,-252" />
+
+<item itemtype="Connector" uid="Connector-7" startpinid="Resistor-9-rPin" endpinid="Node-10-1" pointList="-28,-104,-28,-88,8,-88" />
+
+<item itemtype="Connector" uid="Connector-8" startpinid="Ground-8-Gnd" endpinid="Node-10-0" pointList="8,-80,8,-88" />
+
+<item itemtype="Connector" uid="Connector-9" startpinid="Node-10-2" endpinid="Mosfet-4-Sour" pointList="8,-88,8,-148" />
+
+<item itemtype="Connector" uid="Connector-11" startpinid="Resistor-9-lPin" endpinid="Node-11-0" pointList="-28,-136,-28,-164" />
+
+<item itemtype="Connector" uid="Connector-12" startpinid="Node-11-2" endpinid="Mosfet-4-Gate" pointList="-28,-164,-16,-164" />
+
+<item itemtype="Connector" uid="Connector-14" startpinid="Push-12-pinP0" endpinid="tiny13-2-PORTB1" pointList="-156,-172,-180,-172" />
+
+<item itemtype="Connector" uid="Connector-2" startpinid="AudioOut-3-lPin" endpinid="Resistor-5-rPin" pointList="32,-204,8,-204,8,-216" />
+
+<item itemtype="Connector" uid="Connector-1" startpinid="Mosfet-4-Dren" endpinid="AudioOut-3-rPin" pointList="8,-180,8,-196,32,-196" />
+
+<item itemtype="Connector" uid="Connector-22" startpinid="Ground-13-Gnd" endpinid="Push-12-switch0pinN" pointList="-116,-80,-116,-172,-124,-172" />
+
+<item itemtype="Connector" uid="Connector-26" startpinid="tiny13-2-PORTB0" endpinid="Node-11-1" pointList="-180,-164,-28,-164" />
+
+</circuit>
