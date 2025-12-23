@@ -1,6 +1,8 @@
 #ifndef RUSSIAN_ANTHEM
 #define RUSSIAN_ANTHEM
 
+#include "config.h"
+
 #define NOTE_G4 1
 #define NOTE_D4 2
 #define NOTE_E4 3
@@ -165,11 +167,13 @@ const melody_data melody[102] PROGMEM = {
 #define MELODY_NO_TONE_DURATION(x) 25
 #define MELODY_DURATION(x) pgm_read_word(&melody_durations[pgm_read_word(&melody[x]) & 0xFF])
 
-void mTone(uint8_t frequency)
+void tone(uint8_t frequency)
 {
   if (frequency <= 0) {
+    buzzerOff();
     OCR0A = 0;
   } else {
+    buzzerOn();
     TCCR0B = (1 << WGM02) | (1 << CS02) | (0 << CS01) | (1 << CS00);
     OCR0A = frequency;
   }
