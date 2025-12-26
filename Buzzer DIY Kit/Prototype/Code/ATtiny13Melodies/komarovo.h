@@ -1,5 +1,5 @@
-#ifndef RUSSIAN_ANTHEM
-#define RUSSIAN_ANTHEM
+#ifndef KOMAROVO
+#define KOMAROVO
 
 #include "config.h"
 
