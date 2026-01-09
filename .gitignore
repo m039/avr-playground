@@ -6,3 +6,5 @@ Sandbox/
 .vs
 obj
 *.lst
+FlatCAM
+*_backup
